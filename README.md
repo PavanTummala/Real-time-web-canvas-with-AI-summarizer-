@@ -42,7 +42,7 @@ It demonstrates how WebSockets, FastAPI, React.js, and Vision-Language Models (V
 
 ---
 
-## 📂 Project Structure
+
 
 ## Project Structure
 
