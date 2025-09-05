@@ -1,28 +1,48 @@
-# IntelliDraw - AI-Powered Collaborative Whiteboard
 
-IntelliDraw is a web-based collaborative whiteboard application that uses WebSockets for real-time communication and a machine learning backend to analyze and identify drawings.
+# AI-Powered Collaborative Whiteboard
 
-This project serves as a template to demonstrate the integration of a modern web stack for real-time applications with AI features.
+IntelliDraw is a real-time collaborative whiteboard that combines low-latency multi-user interaction with AI-powered media summarization.
 
-## Features
+It demonstrates how WebSockets, FastAPI, React.js, and Vision-Language Models (VLMs) can be integrated to enhance collaboration.
 
-- **Real-time Collaboration**: Multiple users can draw on the same canvas and see each other's updates instantly.
-- **AI-Powered Drawing Analysis**: Users can request an AI analysis of the current canvas content. The backend uses a (mocked) multimodal LLM to describe the drawing.
-- **Containerized**: The entire application stack (frontend and backend) is containerized with Docker for easy setup and deployment.
+---
 
-## Technology Stack
+## ✨ Features
 
-- **Backend**:
-  - **Framework**: FastAPI (Python)
-  - **WebSockets**: `websockets` library
-  - **Image Processing**: OpenCV
-  - **AI Service**: Mocked service simulating a call to a multimodal LLM like [LLaVA](https://llava-vl.github.io/).
-- **Frontend**:
-  - **Framework**: React.js
-  - **Canvas Library**: `react-konva` for simplified HTML5 Canvas interactions.
-  - **WebSocket Client**: Native Browser WebSocket API.
-- **Orchestration**:
-  - **Containerization**: Docker & Docker Compose
+-   **Real-Time Multi-User Collaboration**
+    
+    Draw or upload images on a shared canvas, instantly synced across participants using WebSockets.
+    
+-   **AI-Powered Image Summarization**
+    
+    Uploaded images are processed through an AI pipeline:
+    -   **BLIP** (Bootstrapping Language-Image Pretraining) generates natural language captions from images.
+    -   **Ollama** (8B LLM, e.g., LLaVA or Llama 3) refines those captions into concise, human-friendly subtitles.
+-   **Containerized Deployment**
+    
+    The full stack runs in Docker with Docker Compose, making it simple to spin up locally or deploy.
+    
+
+---
+
+## 🛠 Technology Stack
+
+-   **Backend**
+    -   FastAPI (Python)
+    -   WebSockets for real-time sync
+    -   Hugging Face BLIP for captioning
+    -   Ollama for text synthesis
+    -   Pillow (PIL) for image handling
+-   **Frontend**
+    -   React.js
+    -   HTML5 `<canvas>` for drawing
+    -   WebSocket API for communication
+-   **Infrastructure**
+    -   Docker & Docker Compose
+
+---
+
+
 
 ## Project Structure
 
