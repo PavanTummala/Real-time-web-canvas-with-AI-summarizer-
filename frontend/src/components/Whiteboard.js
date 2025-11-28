@@ -5,6 +5,8 @@ import { v4 as uuidv4 } from 'uuid';
 const WEBSOCKET_URL = "ws://localhost:8000/ws/" + Date.now(); // Unique ID for this client
 const API_URL = "http://localhost:8000/analyze";
 
+//define whiteboard components which containst handling mouse events
+
 const Whiteboard = () => {
     const [lines, setLines] = useState([]);
     const [analysisResult, setAnalysisResult] = useState(null);
